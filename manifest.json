@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Image solver game",
+  "description": "This extension is a basic image solver game",
+  "version": "1.0",
+
+  "browser_action": {
+     "default_popup": "index.html"
+  },
+  "permissions": [
+   "activeTab"
+   ],
+        "content_scripts": [
+    {
+	   "matches": [ "http://*/*" ],
+		"css":["image-css.css"],
+      "js": ["jquery-1.10.2.js", "jquery-ui.js","puzzle.js"]
+    }
+	]
+}

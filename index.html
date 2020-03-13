@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Image Puzzle</title>
+	
+	<script src="jquery-1.10.2.js"></script>
+		<script src="jquery-ui.js"></script>
+
+    <script src="puzzle.js"></script>
+
+<link href='image-css.css' rel='stylesheet'>
+</head>
+<body style='height:100%'>
+<div id='collage'>
+    <h2>Image Puzzle</h2>
+    <div id='playPanel' style='padding:5px'>
+        <h4 id='imgTitle'></h4>
+        <div style='display:inline-block;margin:auto;width:80%'>
+            <ul id='sortable'></ul>
+            <div id='actualImageBox'>
+                <div id='stepbox'>
+                    <div>Steps: <span class='stepCount'> 0</span></div>
+                </div>
+                <div id='timeBox'>
+                    <div>TimeTaken: <span class='timerCount'> 0</span> secs</div>
+                 </div>
+                 <image id='actualImage'/>
+                 <div> Rearrage picture like above</div>
+                 <div id='levels'>
+                    <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label for="easy">Easy</label>
+                    <input type="radio" name="level" id="medium" value="4" /> <label for="medium">Medium</label>
+                    <input type="radio" name="level" id="hard" value="5" /> <label for="hard">Hard</label>
+                   
+                </div>
+                <div >
+                  <button id="newPhoto" type="button" class="btn">Another Photo</button>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id='gameOver' style='display:none'>
+        <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+            <h2 style="text-align:center">Game Over!!</h2>
+            Congratulations!! <br /> You have completed this picture.
+            <br />
+            Steps: <span class="stepCount">0</span> steps.
+            <br />
+            Time Taken: <span class="timerCount">0</span> seconds.<br />
+            <div>
+                <button type="button" onclick="window.location.reload(true);">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
